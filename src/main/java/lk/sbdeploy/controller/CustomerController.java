@@ -15,13 +15,14 @@ import java.util.List;
 public class CustomerController {
     @Autowired
     private CustomerService customerService;
+
     @PutMapping("saveCustomer")
-    public String SaveCustomer(@Valid  @RequestBody CutomerDto cutomerDto){
+    public String SaveCustomer(@Valid @RequestBody CutomerDto cutomerDto) {
         return customerService.saveCustomer(cutomerDto);
     }
 
     @PutMapping("getCustomers")
-    public List<Customer> GetCustomers(){
+    public List<Customer> GetCustomers() {
         return customerService.getCutomers();
     }
 }
